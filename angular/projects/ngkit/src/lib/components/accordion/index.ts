@@ -1,0 +1,1 @@
+export { NgkAccordionModule } from './ngk-accordion.module';

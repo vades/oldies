@@ -1,0 +1,8 @@
+<ngk-alert [show]="alert.show && alert.type == 'is-success'" [type]="alert.type" (click)="toggleAlert()">
+    <ngk-svg-success header></ngk-svg-success>
+    <p message>{{alert.message}}</p>
+    <p footer>This is an alert footer text</p> 
+</ngk-alert>
+<p *ngIf='!alert.show'>
+    <button type="button" class="button is-success" (click)="toggleAlert('is-success')">Show success alert</button>
+</p>

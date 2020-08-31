@@ -1,0 +1,23 @@
+
+// -----------------------------------------------------------------------------
+// Includes custom styles for the specific project.
+// -----------------------------------------------------------------------------
+
+/* Shared
+-------------------------------------------------- */
+@import "_shared";
+
+/* Default layouts
+-------------------------------------------------- */
+//@import "layout/layout-c";
+
+/* Custom layouts
+-------------------------------------------------- */
+@import "custom/dev/layout/layout-c";
+
+/* Styles
+-------------------------------------------------- */
+@import "custom/dev/header";
+@import "custom/dev/footer";
+@import "custom/dev/common";
+

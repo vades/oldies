@@ -1,0 +1,22 @@
+<nav>
+  <ul class="aside-menu">
+    <li class="root-menu">
+      <h4 title="Dashboard">
+        <a [routerLink]="['/dashboard']" [routerLinkActive]="['link-active']">
+         <i class="fas fa-home"></i><span>Dashboard</span>
+        </a>
+      </h4>
+    </li>
+    <!-- API -->
+    <li class="root-menu">
+      <h4 title="API"><i class="fas fa-database"></i> <span>API</span></h4>
+      <ul class="submenu">
+        <li><a [routerLink]="['/cruds']" [routerLinkActive]="['link-active']">Cruds</a></li>
+        <li><a [routerLink]="['/firestore']" [routerLinkActive]="['link-active']">Firestore</a></li>
+      </ul>
+    </li>
+     
+      <!-- DEV -->
+    
+  </ul>
+</nav>

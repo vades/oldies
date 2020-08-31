@@ -1,0 +1,22 @@
+<vds-page-header [title]="title"></vds-page-header>
+<nav>
+  <ul>
+    <li><a [routerLink]="['/dev/autocomplete']">Autocomplete</a></li>
+  </ul>
+</nav>
+<h2>Context menu</h2>
+<section class="collection">
+	<div class="collection-item" *ngFor="let d of data;let i = index" (click)="changeChild(d)">
+		{{d.name}}
+	</div>
+</section>
+
+<app-view-child></app-view-child>
+
+
+
+
+<!-- <vds-blank-state message="There is no stuff in dev" classList="box-shadow is-info">
+    <i class="far fa-smile fa-3x info" icon></i>
+    <div content>Content</div>
+  </vds-blank-state> -->

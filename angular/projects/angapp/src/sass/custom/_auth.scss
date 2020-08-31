@@ -1,0 +1,12 @@
+/* Auth pages
+-------------------------------------------------- */
+.auth {
+  @include mqMin($break-m) {
+    margin: 0 auto;
+    width: 30%;
+  }
+  
+  @include mqMin($break-l) {
+    width: 30%;
+  }
+ }

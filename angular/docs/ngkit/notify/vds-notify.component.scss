@@ -1,0 +1,19 @@
+/* Notify
+-------------------------------------------------- */
+@import "~sass/_shared";
+@import "~sass/components/_notify.1.0.0";
+
+:host{
+  position: relative;
+  z-index: 10000;
+  margin: 0 auto;
+  > * {
+    position: fixed;
+    width: 100%;
+    max-width: 50%;
+    //top: 0;
+    left: 25%;
+    bottom: 2%;
+    
+  }
+}

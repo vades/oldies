@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// Alert- contains all styles related to the alert.
+// -----------------------------------------------------------------------------
+.alert {
+  text-align: center;
+  padding: $spacing;
+  //background-color: $bcg-color;
+  margin: $spacing 0;
+  color: $gray-70;
+
+  article {
+    font-size: 130%;
+    font-weight: bold;
+  }
+
+  footer {
+    font-size: 110%;
+  }
+
+  .icon {
+    &::before {
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 3em;
+    }
+  }
+
+  /* Info
+-------------------------------------------------- */
+  &.is-info {
+    article {
+      color: $info-color;
+    }
+  }
+
+  /* Success
+-------------------------------------------------- */
+  &.is-success {
+    article {
+      color: $success-color;
+    }
+  }
+
+  /* Warning
+-------------------------------------------------- */
+  &.is-warning {
+    article {
+      color: $warning-color;
+    }
+  }
+
+  /* Danger
+-------------------------------------------------- */
+  &.is-danger {
+    article {
+      color: $danger-color;
+    }
+  }
+  /* SVG
+-------------------------------------------------- */
+svg {
+  height: 20rem;
+  width: 100%;
+  @include mqMin($break-m) {
+    height: 30rem;
+  }
+}
+  
+}

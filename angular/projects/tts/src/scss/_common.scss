@@ -1,0 +1,79 @@
+// -----------------------------------------------------------------------------
+// Common styles
+// -----------------------------------------------------------------------------
+
+/* Spacing
+-------------------------------------------------- */
+main {
+  section,
+  p {
+    margin-bottom: $spacing;
+  }
+}
+
+/* Page header
+-------------------------------------------------- */
+.page-header {
+  border-bottom: solid 1px $border-color;
+  padding-bottom: $spacing;
+  @include displayFlex();
+  @include justifyContent(space-between);
+  @include alignItems(center);
+  margin-bottom: $spacing-double;
+  h1 {
+    @include flexbox();
+    //@include justify-content(space-between);
+    @include align-items(center);
+    img {
+      margin-right: $spacing;
+      height: 3rem;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// TTS styles
+// -----------------------------------------------------------------------------
+
+/* TTS common
+-------------------------------------------------- */
+.tts {
+}
+
+/* TTS settings
+-------------------------------------------------- */
+#tts_settings {
+  @include mqMin($break-l) {
+    @include flexbox();
+    .input-wrap {
+      padding-right: $spacing-double;
+      @include flexbox();
+      @include flex-direction(column);
+      @include justify-content(flex-end);
+    }
+  }
+}
+
+/* TTS reader
+-------------------------------------------------- */
+.tts-reader-wrap {
+  background-color: $gray-10;
+  .tts-reader-header {
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(space-between);
+    font-size: 80%;
+    color: $gray-70;
+  }
+  textarea {
+    margin-bottom: $spacing;
+  }
+  footer {
+    text-align: center;
+  }
+}
+
+#tts_reader {
+  width: 100%;
+  min-height: 30rem;
+}

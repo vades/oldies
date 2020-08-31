@@ -1,0 +1,32 @@
+<header id="header">
+  <section class="container">
+    <!-- Brand -->
+    <div id="headerBrand">
+      <app-aside-toggler></app-aside-toggler>
+       <a [routerLink]="['/']" title="{{env.appName}}">
+        <app-logo></app-logo>
+        <span class="hide-max-m">{{env.appName}}</span>
+      </a>
+    </div>
+    <!-- Primary -->
+    <div id="headerPrimary">
+      <span class="hide-max-m">Angular kit demo</span>
+    </div>
+    <!-- Secondary -->
+    <div id="headerSecondary">
+      <ngk-dropdown classList="has-arrow right">
+        <button type="button" class="button is-circle is-default" header>
+          <mat-icon>more_vert</mat-icon>
+          </button>
+     <nav body>
+       <ul class="navbar">
+         <li role="heading" aria-level="1"><a [routerLink]="['/crud']"><fa-icon icon="database"></fa-icon> <span> Crud</span></a></li>
+         <li role="heading" aria-level="1"><a [routerLink]="['/about']"><fa-icon icon="info-circle"></fa-icon> <span> About</span></a></li>
+       </ul>
+     </nav>
+    </ngk-dropdown>
+    </div>
+
+  </section>
+
+</header>

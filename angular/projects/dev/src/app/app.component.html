@@ -1,0 +1,9 @@
+<app-header [env]="env"></app-header>
+<section id="page" class="layout-c">
+    <app-aside-left></app-aside-left>    
+  <main id="main">
+    <mat-icon>home</mat-icon>
+   <router-outlet></router-outlet>
+  </main>
+</section>
+<app-footer [env]="env"></app-footer>

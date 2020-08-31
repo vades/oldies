@@ -1,0 +1,22 @@
+<form class="newsletter" #f="ngForm" (ngSubmit)="f.form.valid && postData();" novalidate>
+  <label for="email">Enter your valid email to request an early invitation.</label>
+  <section>
+    <div>
+      <input type="email" id="email" name="email" [ngClass]="{ 'border-danger': f.submitted && email.invalid }"
+        #email="ngModel" required email [(ngModel)]="model.email" placeholder="Enter your email">
+    </div>
+    <div>
+      <button type="submit" class="button" [ngClass]="{ 'border-danger': f.submitted && email.invalid }"
+        [disabled]="status == 'process'">
+        <span *ngIf="status != 'process'; else faSpinner">Notify me</span>
+        <ng-template #faSpinner>
+        <fa-icon [icon]="['fas', 'spinner']" [spin]="true"></fa-icon>
+      </ng-template>
+      </button>
+    </div>
+  </section>
+  <div *ngIf="f.submitted && email.invalid" class="danger">
+    <div *ngIf="email.errors.required">Email is required</div>
+    <div *ngIf="email.errors.email">Email must be a valid email address</div>
+  </div>
+</form>

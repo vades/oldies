@@ -1,0 +1,118 @@
+// -----------------------------------------------------------------------------
+// Layout C (content) - layout without sidebars
+// -----------------------------------------------------------------------------
+
+/* Body
+-------------------------------------------------- */
+body {
+
+  /* body overflow is hidden to hide main scrollbar when modal window is open */
+  &.modal-open {
+      overflow: hidden;
+  }
+}
+
+app-root {
+  @include flexbox();
+  @include flex-direction(column);
+  min-height: 100vh;
+}
+header .container, main, footer .bar{
+  /* max-width: $container-max-w;
+  margin: 0 auto; */
+}
+
+/* Header
+-------------------------------------------------- */
+#header {
+  z-index: $zindex-header;
+  height: $header-h;
+  padding: $spacing;
+  
+
+  @include mqMin($break-l) {
+
+    height: $header-h-l;
+    padding: $spacing $spacing-double;
+  }
+
+  >section {
+
+    @include displayFlex();
+    @include justifyContent(space-between);
+    @include alignItems(center);
+    height: 100%;
+    @include mqMin($break-l) {
+      margin: 0 auto;
+      //width: $container-max-w;
+    }
+
+  }
+
+}
+
+/* Page / App Root
+-------------------------------------------------- */
+#page {
+    @include displayFlex();
+    @include justifyContent(space-between);
+    flex: 1;
+}
+
+/* Layout m (main) - without  sidebars
+-------------------------------------------------- */
+.layout-c {
+    #main {
+      padding: $spacing;
+        padding: $spacing;
+        width: 100%;
+        @include mqMin($break-m) {
+          padding: $spacing-double;
+        }
+    }
+}
+
+/* .error-404-page{
+  #main {
+    width: 100% !important;
+}
+} */
+
+/* Sticky header
+-------------------------------------------------- */
+.sticky-header {
+  app-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  #page {
+    padding-top: $header-h;
+
+    @include mqMin($break-l) {
+      padding-top: $header-h-l;
+    }
+  }
+}
+
+/* Footer
+-------------------------------------------------- */
+#footer {
+  .bar{
+     padding: $spacing;
+     font-size: 90%;
+     text-align: center;
+   }
+ }
+
+ /* Container
+-------------------------------------------------- */
+.container {
+ /*  @include mqMin($break-l) {
+      width: $container-max-w;
+      margin: 0 auto;
+  } */
+
+}

@@ -1,0 +1,41 @@
+//@import "~sass/_shared.scss";
+/* Body
+-------------------------------------------------- */
+body {
+  @include displayFlex();
+ @include flexDirection(column);
+ min-height: 100vh;
+
+ /* body overflow is hidden to hide main scrollbar when modal window is open */
+ &.modal-open {
+   overflow: hidden;
+ }
+}
+
+/* Page / App Root
+-------------------------------------------------- */
+#page {
+ @include displayFlex();
+ @include justifyContent(space-between);
+ flex: 1;
+}
+
+/* Layout m (main) - without  sidebars
+-------------------------------------------------- */
+.layout-m {
+ #main {
+ padding: $spacing;
+   @include mqMin($break-l) {
+     //padding: $spacing-double;
+   }
+ }
+}
+
+
+/* Container
+-------------------------------------------------- */
+.container {
+  width: $container-max-w;
+  margin: 0 auto;
+ }
+

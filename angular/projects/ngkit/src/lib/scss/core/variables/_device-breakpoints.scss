@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// Breakpoints for standard devices
+// -----------------------------------------------------------------------------
+
+// Extra small devices (max-width = 599.99px)
+$break-xs: 599px;
+
+// Small devices (min-width = 600px and max-width = 959.99px)
+$break-s: 600px;
+
+// Medium devices (min-width = 960px and max-width = 1279.99px)
+$break-m: 960px;
+
+// Large devices (min-width = 1280px and max-width = 1919.99px)
+$break-l: 1280px;
+
+// Extra large (min-width = 1920px)
+$break-xl: 1920px;

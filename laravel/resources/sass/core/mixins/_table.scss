@@ -1,0 +1,67 @@
+// -----------------------------------------------------------------------------
+// Table mixins
+// -----------------------------------------------------------------------------
+
+/* Base table
+-------------------------------------------------- */
+@mixin table() {
+  font-size: 100%;
+  margin-bottom: $spacing;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: $bcg-color;
+  th,
+  td {
+    text-align: left;
+    padding: $spacing;
+    vertical-align: top;
+  }
+}
+
+/* Condensed table
+-------------------------------------------------- */
+@mixin tableIsCondensed() {
+  font-size: 90%;
+    th,
+    td {
+      padding: $spacing-half;
+    }
+}
+
+/* Bordered table
+-------------------------------------------------- */
+@mixin tableIsBordered() {
+  th,
+  td {
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+/* Striped table
+-------------------------------------------------- */
+@mixin tableIsStriped() {
+  tbody {
+    tr:nth-child(odd) {
+      background-color: $table-strip-bcg-color;
+    }
+  }
+}
+
+/* Table with hover
+-------------------------------------------------- */
+@mixin tableHasHover() {
+  tbody {
+    tr:hover {
+      background-color: $table-hover-bcg-color;
+    }
+  }
+}
+
+/* Disabled, grayed out etc.
+-------------------------------------------------- */
+@mixin tableGrayedOut() {
+  >td {
+    color: lighten($disabled-color,10%);
+   }
+}
+

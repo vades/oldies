@@ -1,0 +1,11 @@
+<section *ngIf="show" [ngClass]="'alert ' + type + ' ' + classList">
+    <header>
+        <ng-content select="[header]"></ng-content>
+    </header>
+    <article>
+        <ng-content select="[message]"></ng-content>
+    </article>
+    <footer>
+        <ng-content select="[footer]"></ng-content>
+    </footer>
+</section>

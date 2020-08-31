@@ -1,0 +1,9 @@
+<div *ngIf="data?.id > -1">
+  <pre>
+    {{data|json}}
+  </pre>
+  <p>
+    {{exampleChild}}
+  </p>
+  <button (click)="close()">Cancel</button> <button (click)="delete()">Delete</button>
+</div>

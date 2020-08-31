@@ -1,0 +1,37 @@
+// -----------------------------------------------------------------------------
+// Search - contains mixins related to the placeholder
+// -----------------------------------------------------------------------------
+@mixin placeholder($color) {
+  ::-webkit-input-placeholder {
+    color: $color;
+    font-style: italic;
+  }
+
+  :-moz-placeholder {
+    color: $color;
+    font-style: italic;
+    opacity: 1;
+  }
+
+  ::-moz-placeholder {
+    color: $color;
+    font-style: italic;
+    opacity: 1;
+  }
+
+  :-ms-input-placeholder {
+    color: $color;
+    font-style: italic;
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $color;
+    font-style: italic;
+  }
+
+  ::placeholder {
+    color: $color;
+    font-style: italic;
+  }
+}

@@ -1,0 +1,40 @@
+/* Topbar
+-------------------------------------------------- */
+#topBar {
+  margin-bottom: $spacing-double;
+  .card {
+    //margin: $spacing-half;
+    background: transparent;
+    border-right: solid 1px $primary-color-20;
+    color: $primary-color-50;
+    header {
+      i {
+        font-size: 140%;
+        filter: grayscale(0.7);
+      }
+    }
+
+    .content {
+      font-size: 85%;
+    }
+    &:hover {
+      color: $primary-color-80;
+        header {
+          i {
+            filter: grayscale(0);
+          }
+        }
+      }
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+ 
+
+}
+@include mqMax($break-m - 1) {
+ #topBar:not(.is-on){
+   display: none;
+ }
+}

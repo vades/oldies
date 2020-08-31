@@ -1,0 +1,7 @@
+<p>newsletter works!</p>
+<ngk-newsletter *ngIf="alert.show != true"></ngk-newsletter>
+<ngk-alert [show]="alert.show" [type]="alert.type" (click)="refresh()">
+    <ngk-svg-success header></ngk-svg-success>
+    <p message>{{alert.message}}</p>
+    <p footer>This is an alert footer text</p> 
+</ngk-alert>

@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// Gaps
+// -----------------------------------------------------------------------------
+
+// spacing
+$spacing: 1rem;
+$spacing-double: $spacing * 2;
+$spacing-triple: $spacing * 3;
+$spacing-quad: $spacing * 4;
+$spacing-half: $spacing / 2;
+$spacing-and-half: $spacing + $spacing-half;
+
+// grid
+$grid_cols: 12;
+$grid_gutter: $spacing; 
+
+// child cols
+$child_cols: 12; 
+$child_cols_gutter:$spacing; 
+
+// input and button
+$input-padding: $spacing;
+$button-padding: $spacing $spacing-and-half;

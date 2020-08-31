@@ -1,0 +1,6 @@
+
+<ngk-alert [show]="alert.show" [type]="alert.type">
+    <ngk-svg-error404 header></ngk-svg-error404>
+    <p message>{{alert.message}}</p>
+    <p footer> <a class="button" [routerLink]="['/']">Take me home</a></p>
+</ngk-alert>

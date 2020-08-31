@@ -1,0 +1,8 @@
+<article class="accordion" [ngClass]="classList">
+    <header [attr.aria-expanded]="expanded || false" (click)="toggle.emit()">
+        <ng-content select="[accordionHeader]"></ng-content>
+    </header>
+    <div class="body" *ngIf="expanded">
+        <ng-content select="[accordionBody]"></ng-content>
+    </div>
+</article>

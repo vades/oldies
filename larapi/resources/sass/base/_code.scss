@@ -1,0 +1,42 @@
+// -----------------------------------------------------------------------------
+// Code - contains all styles related to the code and pre.
+// -----------------------------------------------------------------------------
+
+code,
+pre {
+    font-family: $font-monospace;
+    background-color: $gray-10;
+    /*  white-space: pre-wrap;       // css-3 
+  white-space: -moz-pre-wrap;  // Mozilla, since 1999
+  white-space: -pre-wrap;      // Opera 4-6
+  white-space: -o-pre-wrap;   // Opera 7 
+  word-wrap: break-word;       // Internet Explorer 5.5+ */
+}
+
+pre {
+    /* display: inline-block;
+  padding: 2px 4px; */
+    //background-color: $gray-10;
+    font-size: 90%;
+    line-height: 1.1;
+    overflow: auto;
+    padding: $spacing;
+    margin: $spacing 0;
+}
+
+code {
+  padding: 2px 4px;
+}
+
+pre {
+code {
+        background-color: transparent;
+        display: inline;
+        line-height: inherit;
+        margin: 0;
+        max-width: auto;
+        overflow: visible;
+        word-wrap: normal;
+        padding: 0;
+    }
+}

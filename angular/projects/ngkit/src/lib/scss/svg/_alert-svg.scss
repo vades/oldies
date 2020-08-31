@@ -1,0 +1,11 @@
+/* Alert
+-------------------------------------------------- */
+@import "../scss/_shared";
+
+svg{
+    height: 15rem;
+    width: 100%;
+    @include mqMin($break-m) {
+      height: 20rem;
+    }
+  }

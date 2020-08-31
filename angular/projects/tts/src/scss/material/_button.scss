@@ -1,0 +1,24 @@
+/* Custom Theming for Angular Material - button
+    -------------------------------------------------- */
+.mat-button,
+.mat-raised-button,
+.mat-icon-button,
+.mat-stroked-button,
+.mat-flat-button,
+.mat-fab,
+.mat-mini-fab {
+    // Font size for medium devices
+    @include mqMin($break-s) {
+        font-size: $body-font-size-s;
+    }
+
+    // Font size for lmedium devices
+    @include mqMin($break-m) {
+        font-size: $body-font-size-m;
+    }
+
+    // Font size for large devices
+    @include mqMin($break-l) {
+        font-size: $body-font-size-l;
+    }
+}

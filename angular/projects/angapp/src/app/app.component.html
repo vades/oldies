@@ -1,0 +1,10 @@
+<app-header [appName]="env.appName"></app-header>
+<section id="page" class="layout-lm">
+  <app-aside-left></app-aside-left>
+  <main id="main">
+      <vds-notify inverse="true"></vds-notify>
+      <vds-alert></vds-alert>
+    <router-outlet></router-outlet>
+  </main>
+</section>
+<app-footer [appName]="env.appName"></app-footer>

@@ -1,0 +1,8 @@
+/* Modal
+-------------------------------------------------- */
+@import "~sass/_shared";
+@import "~sass/components/_autocomplete.1.0.0";
+:host {
+  position: relative;
+  //width: 600px;
+}

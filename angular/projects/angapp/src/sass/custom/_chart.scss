@@ -1,0 +1,10 @@
+/* Chart container
+-------------------------------------------------- */
+.chart-container{
+ 
+  @include mqMin($break-l) {
+    //position: relative; 
+    margin: 0 auto;
+    width: 70%;
+  }
+}

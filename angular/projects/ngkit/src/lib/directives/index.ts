@@ -1,0 +1,1 @@
+export { NgkDirectivesModule } from './ngk-directives.module';

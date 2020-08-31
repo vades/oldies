@@ -1,0 +1,27 @@
+/* Layout m (main) - without  sidebars
+-------------------------------------------------- */
+.layout-lm {
+  #main {
+    width: 100%;
+    padding: $spacing;
+
+    @include mqMin($break-l) {
+      padding: $spacing-double;
+    }
+  }
+}
+
+/* From medium devices
+-------------------------------------------------- */
+.aside-expanded-true {
+  @include mqMin($break-m) {
+    app-aside-left {
+      width: 15%;
+      padding: $spacing-double;
+    }
+
+    #main {
+      width: 85%;
+    }
+  }
+}

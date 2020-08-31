@@ -1,0 +1,89 @@
+// -----------------------------------------------------------------------------
+// Layout C (content) - layout without sidebars
+// -----------------------------------------------------------------------------
+
+/* Body
+-------------------------------------------------- */
+@import "_body";
+
+/* Header
+-------------------------------------------------- */
+@import "_header";
+
+/* Aside left
+-------------------------------------------------- */
+@import "_aside-left";
+
+/* Page / App Root
+-------------------------------------------------- */
+#page {
+    @include displayFlex();
+    @include justifyContent(space-between);
+    flex: 1;
+}
+
+/* Layout m (main) - without  sidebars
+-------------------------------------------------- */
+.layout-c {
+    #main {
+        padding: $spacing;
+        width: 100%;
+        @include mqMin($break-m) {
+          padding: $spacing-double;
+        }
+    }
+}
+
+.aside-true{
+  @include mqMin($break-m) {
+    .layout-c {
+      app-aside-left{
+        width: 20%;
+      }
+      #main {
+          width: 80%;
+      }
+  }
+  }
+  
+}
+
+.error-404-page{
+  #main {
+    width: 100% !important;
+}
+}
+
+/* Sticky header
+-------------------------------------------------- */
+.sticky-header {
+  app-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  #page {
+    padding-top: $header-h;
+
+    @include mqMin($break-l) {
+      padding-top: $header-h-l;
+    }
+  }
+}
+
+
+/* Container
+-------------------------------------------------- */
+.container {
+   /*  @include mqMin($break-l) {
+        width: $container-max-w;
+        margin: 0 auto;
+    } */
+
+}
+
+/* Footer
+-------------------------------------------------- */
+@import "_footer";

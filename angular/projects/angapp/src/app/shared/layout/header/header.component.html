@@ -1,0 +1,46 @@
+<!-- /////////////////////////////////////// Header ////////////////////////////////////// -->
+<header id="header">
+  <section>
+    <!-- Branding -->
+    <div id="headerBrand">
+     
+       <app-aside-toggler classList="hide-min-m_ margin-r"></app-aside-toggler>
+      <!-- Logo -->
+      <a class="hide-max-s" id="headerLogo" [routerLink]="['/dashboard']">{{appName}}</a>
+    </div>
+    <!-- Search and content -->
+    <!-- <div id="headerPrimary">
+
+      <div class="item-group group-inline no-border">
+        <input type="text" class="field search-autocomplete" placeholder="To search, type and hit enter" autocomplete="off"
+          aria-controls="headerAutocompleteResult">
+        <button type="submit" class="item button">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+
+    </div> -->
+    <!-- <div>
+      <a class="button" [routerLink]="[{ outlets: { 'addsnippet':['addsnippet'] } }]"><i class="fas fa-plus"></i></a>
+
+    </div> -->
+    <div id="headerSecondary" class="align-right position-relative grouper">
+        <vds-dropdown label="John Doe" btnClass="is-outlined" classList="right has-arrow">
+      <nav>
+        <ul id="headerUserMenu">
+          <li>
+            <a [routerLink]="['/user']" [routerLinkActive]="['link-active']" role="menuitem">
+              <span>My profile</span>
+            </a>
+          </li>
+          <li><a [routerLink]="['/settings']" [routerLinkActive]="['link-active']" role="menuitem"><span>Settings</span></a></li>
+          <li><a [routerLink]="['/about']" [routerLinkActive]="['link-active']" role="menuitem"><span>About</span></a></li>
+          <li><a [routerLink]="['/logout']" [routerLinkActive]="['link-active']" role="menuitem"><span>Logout</span></a></li>
+        </ul>
+      </nav>
+    </vds-dropdown>
+    </div>
+ 
+
+  </section>
+</header>

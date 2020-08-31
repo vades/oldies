@@ -1,0 +1,17 @@
+<header>
+    <em>Comming soon</em>
+    <h1><span>voic</span><strong>iq</strong></h1>
+   
+  </header>
+  <section>
+   <p>Online Application that converts text to natural sounding voices.</p>
+  </section>
+  <footer>
+    <h2>We are nearly to complete</h2>
+    <ngk-newsletter *ngIf="alert.show != true"></ngk-newsletter>
+    <ngk-alert [show]="alert.show" [type]="alert.type" (click)="toggleAlert()">
+      <ngk-svg-success header></ngk-svg-success>
+      <p class="alert-message" message>Thank you for getting in touch. Have a great day.</p>
+  </ngk-alert>
+ 
+  </footer>

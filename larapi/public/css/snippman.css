@@ -1,0 +1,308 @@
+/* Shared
+-------------------------------------------------- */
+
+/* Settings
+-------------------------------------------------- */
+
+/* Global variables
+-------------------------------------------------- */
+
+/* Default colors
+-------------------------------------------------- */
+
+/* snippman variables
+-------------------------------------------------- */
+
+/* Custom variables
+-------------------------------------------------- */
+
+/* Mixins
+-------------------------------------------------- */
+
+/* Button base mixin
+-------------------------------------------------- */
+
+/* Button transparent mixin
+-------------------------------------------------- */
+
+/* Button disabled mixin
+-------------------------------------------------- */
+
+/* Button colored mixin
+-------------------------------------------------- */
+
+/* Base
+-------------------------------------------------- */
+
+/* Slide canvas to right
+-------------------------------------------------- */
+
+/* Canvas is on
+-------------------------------------------------- */
+
+/* Layout
+-------------------------------------------------- */
+
+#header {
+  background: #004d73;
+  color: #fff;
+}
+
+@media only screen and (min-width: 1200px) {
+  #header {
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+    box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+  }
+}
+
+#headerBrand {
+  font-size: 130%;
+}
+
+#headerBrand a {
+  color: #e6edf1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#headerBrand .logo-symbol {
+  margin-right: 0.5rem;
+  font-size: 160%;
+  display: inline-block;
+  width: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 130%;
+  color: #004d73;
+  background: #e6edf1;
+  border-radius: 50%;
+}
+
+#headerPrimary {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+#headerPrimary form {
+  padding: 0 2rem;
+}
+
+#headerPrimary .search {
+  background: #ffffff;
+}
+
+#headerPrimary .search button {
+  color: #004d73;
+}
+
+#headerSecondary > .button {
+  color: #b3cad5;
+  font-size: 120%;
+}
+
+#headerSecondary nav li {
+  margin-right: 2rem;
+}
+
+#headerSecondary nav a {
+  color: #b3cad5;
+}
+
+#headerSecondary nav a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media only screen and (max-width: 992px) {
+  #headerSecondary nav {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    z-index: 4100;
+    background-color: rgba(37, 37, 37, 0.5);
+    -webkit-transition: -webkit-transform .3s ease-in;
+    transition: -webkit-transform .3s ease-in;
+    transition: transform .3s ease-in;
+    transition: transform .3s ease-in, -webkit-transform .3s ease-in;
+    width: 100%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    left: auto;
+    right: 0;
+  }
+
+  #headerSecondary nav > * {
+    height: 100%;
+    width: 80%;
+    padding: 1rem;
+    background-color: #ffffff;
+    margin-right: 20%;
+  }
+
+  #headerSecondary nav > * {
+    margin-left: 20%;
+    margin-right: 0;
+  }
+
+  #headerSecondary nav.is-on {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: -webkit-transform .3s ease-out;
+    transition: -webkit-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+  }
+
+  #headerSecondary nav ul {
+    background: #004d73;
+  }
+
+  #headerSecondary nav ul li {
+    font-size: 120%;
+    border-bottom: solid 1px #1a5f81;
+  }
+
+  #headerSecondary nav ul li a {
+    padding: 1rem 0;
+    display: block;
+  }
+
+  #headerSecondary nav ul li i {
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #headerSecondary > .button {
+    display: none;
+  }
+
+  #headerSecondary nav ul {
+    display: inline;
+  }
+
+  #headerSecondary nav ul li {
+    display: inline-block;
+  }
+
+  #headerSecondary nav ul i {
+    margin-right: 0.5rem;
+  }
+}
+
+/* Footer
+-------------------------------------------------- */
+
+#footer {
+  border-top: solid 1px #ccdbe3;
+}
+
+#footer .bar a::before {
+  content: "\2022";
+  padding: 1rem;
+}
+
+/* Page header
+-------------------------------------------------- */
+
+.page-header {
+  border-bottom: solid 1px #ccdbe3;
+  padding-bottom: 1rem;
+}
+
+.page-header h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-header h1 img {
+  margin-right: 1rem;
+  height: 3rem;
+}
+
+/* Validate errors
+-------------------------------------------------- */
+
+.validate-errors > * {
+  font-weight: bold;
+  color: #d9534f;
+}
+
+.validate-errors > *::before {
+  content: "*";
+}
+
+.panel-card footer {
+  margin-top: 1rem;
+}
+
+.panel-card footer span {
+  font-size: 90%;
+  color: #33718f;
+  background-color: #e6edf1;
+  padding: 2px 0.5rem;
+  border-radius: 2px;
+}
+
+/* Snippet detail
+-------------------------------------------------- */
+
+.snippet header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 90%;
+}
+
+.snippet header > * {
+  margin-right: 2rem;
+}
+
+.snippet header .snippet-category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.snippet header .snippet-category img {
+  margin-right: 1rem;
+  max-width: 32px;
+  max-height: 32px;
+}
+
+.snippet h1 {
+  border-bottom: solid 1px #ccdbe3;
+  margin: 1rem 0 1rem 0;
+  padding-bottom: 1rem;
+}
+
+
+/*# sourceMappingURL=snippman.css.map*/

@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// Layout C (content) - layout without sidebars
+// -----------------------------------------------------------------------------
+
+/* Body
+-------------------------------------------------- */
+@import "_body";
+
+/* Header
+-------------------------------------------------- */
+@import "_header";
+
+/* Page / App Root
+-------------------------------------------------- */
+#page {
+    @include displayFlex();
+    @include justifyContent(space-between);
+    flex: 1;
+}
+
+/* Layout m (main) - without  sidebars
+-------------------------------------------------- */
+.layout-m {
+    #main {
+        padding: $spacing;
+        width: 100%;
+        @include mqMin($break-l) {
+          width: $container-max-w;
+        }
+    }
+}
+
+
+/* Container
+-------------------------------------------------- */
+.container {
+    @include mqMin($break-l) {
+        width: $container-max-w;
+        margin: 0 auto;
+    }
+
+}
+
+/* Footer
+-------------------------------------------------- */
+@import "_footer";

@@ -1,0 +1,33 @@
+<vds-page-header [title]="title">
+ 
+</vds-page-header>
+<vds-search-box searchService="crud" (loading)="loading = $event" (results)="updateResults($event)">
+  <input type="text" placeholder="Search" autofocus> <span *ngIf="loading">Loading...</span>
+  <vds-search-result [results]="results"></vds-search-result>
+</vds-search-box>
+
+
+<!-- <table class="table is-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Name</th>
+      <th>Created</th>
+      <th>Updated</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr *ngFor="let d of data ;trackBy: trackByFn">
+      <td><a [routerLink]="['/cruds/id',d.id]">{{d.id}}</a></td>
+      <td><a [routerLink]="['/cruds/id',d.id]">{{d.title}}</a></td>
+      <td>{{d.name}}</td>
+      <td>{{d.created_at}}</td>
+      <td>{{d.updated_at}}</td>
+      <td>{{d.status}}</td>
+     
+    </tr>
+  </tbody>
+</table>
+ -->

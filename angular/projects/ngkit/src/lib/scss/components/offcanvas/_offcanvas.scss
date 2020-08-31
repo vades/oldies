@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// Off-Canvas
+// -----------------------------------------------------------------------------
+
+.offcanvas {
+  @include offcanvas();
+
+  // Slide from right to left
+  &.slide-to-right {
+    @include offcanvasToRight();
+   
+  }
+
+  // Canvas is on
+  &.is-on {
+    @include offcanvasIsOn();
+  }
+
+}

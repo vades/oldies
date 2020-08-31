@@ -1,0 +1,35 @@
+/* Custom Theming for Angular Material - panel
+    -------------------------------------------------- */
+.mat-expansion-panel-header {
+    // Font size for medium devices
+    @include mqMin($break-s) {
+        font-size: $h2-font-size-s;
+    }
+
+    // Font size for lmedium devices
+    @include mqMin($break-m) {
+        font-size: $h2-font-size-m;
+    }
+
+    // Font size for large devices
+    @include mqMin($break-l) {
+        font-size: $h2-font-size-l;
+    }
+}
+
+.mat-expansion-panel-content {
+     // Font size for medium devices
+     @include mqMin($break-s) {
+        font-size: $body-font-size-s;
+    }
+
+    // Font size for lmedium devices
+    @include mqMin($break-m) {
+        font-size: $body-font-size-m;
+    }
+
+    // Font size for large devices
+    @include mqMin($break-l) {
+        font-size: $body-font-size-l;
+    }
+  }

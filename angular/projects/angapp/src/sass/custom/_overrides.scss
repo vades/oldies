@@ -1,0 +1,398 @@
+//@import "~sass/_shared.scss";
+/* Body
+-------------------------------------------------- */
+body {
+  @include displayFlex();
+  @include flexDirection(column);
+  min-height: 100vh;
+
+  /* body overflow is hidden to hide main scrollbar when modal window is open */
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+
+/* Page / App Root
+-------------------------------------------------- */
+#page {
+  @include displayFlex();
+  @include justifyContent(space-between);
+  flex: 1;
+}
+
+/* Angular embeded elements
+-------------------------------------------------- */
+app-root {
+  @include displayFlex();
+  @include flexDirection(column);
+  min-height: 100vh;
+}
+
+/* Various overrides
+-------------------------------------------------- */
+[role="button"] {
+  cursor: pointer;
+}
+
+/* Accordion
+-------------------------------------------------- */
+.accordion-toggle {
+  &::after {
+    margin-left: $spacing;
+    font-size: 130%;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+
+  &[aria-expanded="false"] {
+    &::after {
+      content: "\f107";
+    }
+  }
+
+  &[aria-expanded="true"] {
+
+    &::after {
+      content: "\f106";
+      color: $secondary-color;
+    }
+  }
+
+  &:focus {
+
+    &::after {
+      font-weight: bold;
+      color: $focus-color;
+    }
+
+  }
+}
+
+/* Tab
+-------------------------------------------------- */
+[role="tablist"] {
+  i {
+    filter: grayscale(0.6);
+  }
+
+  margin-top: $spacing;
+
+  @include mqMax($break-s - 1) {
+    @include displayFlex();
+    @include flexWrap(wrap);
+
+    li {
+      flex: 1 1 0;
+      text-align: center;
+    }
+
+    a {
+      border-bottom: 1px solid $border-color;
+      padding: $spacing 0;
+    }
+
+    [aria-selected] {
+      background: $border-color;
+
+    }
+
+  }
+}
+
+/* Dropdown
+-------------------------------------------------- */
+.dropdown {
+  padding: $spacing 0;
+
+  >li {
+    padding: 0 $spacing;
+
+    a {
+      .fas {
+        margin-right: $spacing;
+        color: $primary-color-50;
+      }
+
+      padding: $spacing-half $spacing;
+
+      &:hover {
+        background-color: $primary-color-10;
+        text-decoration: none;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: $spacing;
+
+    }
+  }
+}
+
+/* Gateway Card
+-------------------------------------------------- */
+.card {
+  position: relative;
+
+  &.gateway {
+    h2 {
+      a {
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+
+    .icon-status::before {
+      content: "\f00c";
+      font-size: 200%;
+      color: $success-color;
+
+    }
+
+    &.status-error {
+      background-color: $danger-bcg-color;
+
+      .icon-status::before {
+        content: "\f05e";
+        color: $danger-color;
+
+      }
+    }
+
+    &.status-warning {
+      background-color: $warning-bcg-color;
+
+      .icon-status::before {
+        content: "\f071";
+        color: $warning-color;
+      }
+    }
+
+    .status-report {
+      font-size: 90%;
+      font-style: italic;
+
+      span {
+        display: block;
+      }
+    }
+
+  }
+
+}
+
+/* Device Card
+-------------------------------------------------- */
+vds-card {
+ 
+  &.device-card{
+    position: relative;
+    article {
+      a {
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+    padding: $spacing;
+    header{
+      img{
+        max-height: 100px;
+      }
+    }
+  }
+
+}
+
+/* Group Card
+-------------------------------------------------- */
+vds-card {
+  &.group-card{
+    padding: $spacing;
+    header{
+      img{
+        max-height: 100px;
+      }
+    }
+    .fa-icon{
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    .icon-status::before {
+      content: "\f00c";
+      font-size: 200%;
+      color: $success-color;
+
+    }
+    &.status-error {
+      background-color: $danger-bcg-color;
+
+      .icon-status::before {
+        content: "\f05e";
+        color: $danger-color;
+
+      }
+    }
+
+    &.status-warning {
+      background-color: $warning-bcg-color;
+
+      .icon-status::before {
+        content: "\f071";
+        color: $warning-color;
+      }
+    }
+    &.status-all {
+
+      .icon-status::before {
+        content: "\f0c5";
+        color: $info-color;
+      }
+    }
+
+    
+  }
+}
+/* Gateway detail status
+-------------------------------------------------- */
+.gateway-status{
+  .fa-icon{
+    &:hover{
+      text-decoration: none;
+    }
+    &:before{
+      content: "\f00c";
+      color: $success-color;
+      margin-right: $spacing;
+    }
+  }
+  &.status-success {
+    header{
+      background-color: $success-bcg-color;
+    }
+  }
+  &.status-error {
+    header{
+      background-color: $danger-bcg-color;
+    }
+    
+
+    .fa-icon::before {
+      content: "\f05e";
+      color: $danger-color;
+
+    }
+  }
+  &.status-warning {
+    header{
+      background-color: $warning-bcg-color;
+    }
+   .fa-icon::before {
+      content: "\f071";
+      color: $warning-color;
+    }
+  }
+}
+
+/* Gateway detail devices
+-------------------------------------------------- */
+.gateway-devices{
+  &.log-overflow{
+    height: 40rem;
+  }
+ 
+}
+
+
+
+/* Log wrap
+-------------------------------------------------- */
+.log-overflow {
+  height: 12rem;
+  overflow-y: scroll;
+
+  @include mqMin($break-l) {
+    height: 20rem;
+  }
+}
+
+.table-overflow {
+  height: 15rem;
+  overflow-y: scroll;
+
+  @include mqMin($break-l) {
+    height: 30rem;
+  }
+}
+
+/* Gateway devices
+-------------------------------------------------- */
+.table-gateway-devices {
+  .icon-device::before {
+    content: "\f068";
+
+  }
+
+  // Controller
+  .device-controller {
+    .icon-device::before {
+      content: "\f6ff";
+      color: $blue;
+    }
+  }
+
+  // Mains
+  .device-mains {
+    .icon-device::before {
+      content: "\f0e7";
+      color: $purple;
+    }
+  }
+
+  // battery
+  .device-battery {
+    .icon-device::before {
+
+      content: "\f240";
+      color: $green;
+    }
+  }
+
+  //flirs
+  .device-flirs {
+    .icon-device::before {
+      content: "\f0f3";
+      color: $red;
+    }
+  }
+}
+
+/* Blank state
+-------------------------------------------------- */
+.blank-state {
+  header {
+    color: $primary-color-60;
+  }
+
+  i {
+    font-size: 300%;
+    color: $primary-color-40;
+  }
+}

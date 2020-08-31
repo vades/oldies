@@ -1,0 +1,48 @@
+// -----------------------------------------------------------------------------
+// Custom header
+// -----------------------------------------------------------------------------
+
+$logo-h: 3.2rem;
+#header {
+  background: $bcg-color;
+
+  //color: #fff;
+  @include mqMin($break-l) {
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+    box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+
+  }
+
+}
+
+#headerBrand {
+    font-size: 110%;
+    >* {
+      vertical-align: middle;
+      display: inline-block;
+      height: $logo-h;
+      line-height:$logo-h;
+    }
+
+    app-logo {
+      margin-right: $spacing-half;
+      svg {
+        color: #B52E31;
+        height:$logo-h;
+
+      }
+    }
+}
+
+#headerPrimary {
+  @include flex(1);
+
+  >* {
+    padding: 0 $spacing-double;
+    font-style: italic;
+  }
+
+}
+
+#headerSecondary {}

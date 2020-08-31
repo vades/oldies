@@ -1,0 +1,4 @@
+<section *ngIf="alertify" [@slideInOutAnimation] [ngClass]="'alertify ' + (inverse ? 'inverse ' : '')  + alertify.status + ' ' + classList" [class.inverse]="inverse" (click)="clearAlertify()">
+    <div>{{alertify.message}}</div>
+    <span class="close">&times;</span>
+</section>

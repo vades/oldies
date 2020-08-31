@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// Search - contains all styles related to the search box
+// -----------------------------------------------------------------------------
+
+.input-group{
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  @include mqMin($break-l) {
+    @include inline-flexbox();
+}
+ 
+  /* Search input 
+-------------------------------------------------- */
+input{
+  //@include texty-input();
+}
+
+
+/* Search button
+-------------------------------------------------- */
+button{
+  //@include button();
+}
+}

@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// Common styles
+// -----------------------------------------------------------------------------
+
+/* Spacing
+-------------------------------------------------- */
+main{
+ section,p{
+   margin-bottom: $spacing;
+ }
+}
+
+/* Page header
+-------------------------------------------------- */
+.page-header{
+  border-bottom: solid 1px $border-color;
+  padding-bottom: $spacing;
+  h1{
+    @include flexbox();
+    //@include justify-content(space-between);
+    @include align-items(center);
+    img{
+      margin-right: $spacing;
+      height: 3rem;
+    }
+  }
+}

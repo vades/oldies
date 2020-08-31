@@ -1,0 +1,89 @@
+
+// -----------------------------------------------------------------------------
+// Alert- contains all styles related to the alert.
+// -----------------------------------------------------------------------------
+.alert {
+  text-align: center;
+  padding: $spacing;
+  background-color: $bcg-color;
+  margin: $spacing 0;
+  //border: solid 1px $border-color;
+  background-color: $bcg-color;
+
+  header {
+    font-size: 130%;
+    font-weight: bold;
+   
+  }
+
+  .icon {
+    &::before {
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 3em;
+    }
+  }
+  article {
+    font-size: 110%;
+   
+  }
+
+  /* Info
+-------------------------------------------------- */
+  &.is-info {
+    header,.icon{
+      color: $info-color;
+    }
+
+    .icon {
+      &::before {
+        content: '\f05a';
+      }
+    }
+  }
+
+  /* Success
+-------------------------------------------------- */
+  &.is-success {
+     header,.icon{
+     color: $success-color;
+    }
+    .icon {
+      &::before {
+        content: '\f058';
+      }
+    }
+  }
+
+  /* Warning
+-------------------------------------------------- */
+  &.is-warning {
+    header,.icon{
+      color: $warning-color;
+    }
+    .icon,.icon {
+      &::before {
+        content: '\f071';
+      }
+    }
+  }
+
+  /* Danger
+-------------------------------------------------- */
+  &.is-danger,.icon {
+    header,.icon{
+      color: $danger-color;
+    }
+    .icon {
+      &::before {
+        content: '\f06a';
+      }
+    }
+  }
+
+}

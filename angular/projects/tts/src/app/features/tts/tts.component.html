@@ -1,0 +1,140 @@
+
+
+<form #f="ngForm" (ngSubmit)="f.form.valid && doAction('play');" novalidate>
+   <!-- --------------------- Tts reader --------------------- -->
+    <ul class="form-list tts-reader-wrap padding-double">
+        <li class="tts-reader-header">
+            <span>Number of characters: {{ cfg.utterance.text.length }} </span>
+            <span *ngIf="synthesis.speaking">Speaking...</span>
+                <button mat-button type="button" title="Clear text" (click)="doAction('clear')">
+                    Clear text
+                </button>
+        </li>
+        <li>
+            <textarea name="tts_reader" id="tts_reader" placeholder="Copy and paste your text here"
+                [(ngModel)]="cfg.utterance.text"></textarea>
+        </li>
+        <li class="align-center">
+            <!-- Speak -->
+            <button mat-icon-button title="Speak" type="submit" *ngIf="!synthesis.speaking || synthesis.paused">
+                <mat-icon class="maticon-2x">play_arrow</mat-icon>
+            </button>
+
+            <!-- Pause -->
+            <button mat-icon-button type="button" title="Pause" *ngIf="synthesis.speaking" (click)="doAction('pause')">
+                <mat-icon class="maticon-2x">pause</mat-icon>
+            </button>
+
+            <!-- Cancel -->
+            <!-- <button mat-icon-button type="button" title="Cancel" *ngIf="synthesis.speaking" (click)="doAction('cancel')">
+                <mat-icon class="maticon-2x">stop</mat-icon>
+            </button> -->
+        </li>
+    </ul>
+
+    <mat-accordion>
+
+        <!-- --------------------- Accordion --------------------- -->
+        <mat-expansion-panel [expanded]="accordionStep === 0" (opened)="setAccordionStep(0)">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Settings
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="form-list margin-top-double">
+                <li class="inline-min-m">
+                   <label for="tts_voice">Voice</label>
+                    <select name="tts_voice" id="tts_voice" [(ngModel)]="cfg.utterance.voice" (change)="setVoice()">
+                        <option [ngValue]="item.name" *ngFor="let item of voices" [selected]="item.name== cfg.utterance.voice">
+                            {{item.name}}</option>
+                    </select>
+                </li>
+                <li class="inline-min-m">
+                    <label for="tts_rate">Speed ({{cfg.utterance.rate}})</label>
+                    <p class="range-wrap">
+                        <input class="range" type="range" name="tts_rate" id="tts_rate" [(ngModel)]="cfg.utterance.rate"
+                            min="0.1" max="2" step="0.1">
+                    </p>
+        
+                </li>
+                <li class="inline-min-m">
+                    <label for="tts_pitch">Pitch ({{cfg.utterance.pitch}})</label>
+                    <p class="range-wrap"><input class="range" type="range" name="tts_pitch" id="tts_pitch"
+                            [(ngModel)]="cfg.utterance.pitch" min="0" max="2" step="0.1"></p>
+                </li>
+                <li class="inline-min-m">
+                    <label for="tts_volume">Volume ({{cfg.utterance.volume}})</label>
+                    <p class="range-wrap"><input class="range" type="range" name="tts_volume" id="tts_volume"
+                            [(ngModel)]="cfg.utterance.volume" min="0" max="1" step="0.1"></p>
+                </li>
+                <li>
+                    <button mat-stroked-button type="button" *ngIf="!synthesis.speaking" (click)="doAction('test')">Test</button>&nbsp;
+                    <button mat-stroked-button type="button" *ngIf="synthesis.speaking" (click)="doAction('cancel')">Cancel</button>&nbsp;
+                    <button mat-stroked-button type="button" (click)="doAction('reset')">Reset</button>
+                </li>
+            </ul>
+        </mat-expansion-panel>
+
+        <!-- ---------------------Help --------------------- -->
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Help
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div>There will be help</div>
+        </mat-expansion-panel>
+
+    </mat-accordion>
+
+    <!-- --------------------- Tts settings --------------------- -->
+    
+</form>
+
+
+<!-- <form #f="ngForm" (ngSubmit)="f.form.valid && doAction('play');" novalidate>
+    <ul>
+        <li>
+            <textarea name="tts_reader" id="tts_reader_" placeholder="Copy and paste your text here" [(ngModel)]="cfg.utterance.text" ></textarea>
+        </li>
+        <li>Counter <span *ngIf="synthesis.speaking">| Speaking...</span> <button type="button" (click)="doAction('clear')">Cl</button></li>
+    </ul>
+
+    <ul>
+        <li>
+            <button type="submit">S</button>
+            <button type="button" (click)="doAction('pause')">P</button>
+            <button type="button" (click)="doAction('cancel')">C</button>
+        </li>
+    </ul>
+
+
+    <ul>
+        <li>
+            <label for="tts_voice">Voice</label>
+            <select name="tts_voice" id="tts_voice" [(ngModel)]="cfg.utterance.voice" (change)="setVoice()">
+                <option [ngValue]="item.name" *ngFor="let item of voices" [selected]="item.name== cfg.utterance.voice">
+                    {{item.name}}</option>
+            </select>
+        </li>
+        <li>
+            <label for="tts_rate">Speed</label>
+            <input type="range" name="tts_rate" id="tts_rate" [(ngModel)]="cfg.utterance.rate" min="0.1" max="2" step="0.1">
+        </li>
+        <li>
+            <label for="tts_pitch">Pitch</label>
+            <input type="range" name="tts_pitch" id="tts_pitch" [(ngModel)]="cfg.utterance.pitch" min="0" max="2" step="0.1">
+        </li>
+        <li>
+            <label for="tts_volume">Volume</label>
+            <input type="range" name="tts_volume" id="tts_volume" [(ngModel)]="cfg.utterance.volume" min="0" max="1" step="0.1">
+        </li>
+        <li>
+            <button type="button" (click)="doAction('test')">T</button> / <button type="button" (click)="doAction('cancel')">S</button> | <button type="button" (click)="doAction('reset')">R</button>
+        </li>
+    </ul>
+</form> -->
+
+<!-- Debug -->
+<!-- <pre>{{ cfg.utterance | json}}</pre> -->
+<pre>{{ synthesis | json}}</pre>

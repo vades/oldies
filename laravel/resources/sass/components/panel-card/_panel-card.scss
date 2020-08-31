@@ -1,0 +1,110 @@
+// -----------------------------------------------------------------------------
+// Panel Card - contains all styles related to the search panel card.
+// On the small devices displays an element as a Horizontal Panel.
+// On the larg devices displays an element as a Card.
+// -----------------------------------------------------------------------------
+
+/* Panel
+-------------------------------------------------- */
+@include mqMax($break-s - 1) {
+.panel-card{
+ 
+  > article{
+    position: relative;
+   
+    border-bottom: solid 1px $border-color;
+    padding: $spacing 0;
+    section{
+      @include flexbox();
+      @include align-items(center);
+    }
+    figure{
+      margin-right: $spacing-double;
+      img{
+        width: 32px;
+        max-height: 40px;
+      }
+     
+    }
+  
+    header{
+      @include flex(1);
+      @include flexbox();
+      @include justify-content(space-between);
+      @include align-items(center);
+      line-height: 1.2;
+
+        a {
+          padding-right: $spacing;
+          &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+          }
+        }
+    }
+    .body{
+     display: none;
+    }
+  }
+
+}
+}
+
+/* Card
+-------------------------------------------------- */
+@include mqMin($break-s) {
+  .panel-card{
+    @include flexbox();
+    @include flex-wrap(wrap);
+   
+    //@include justify-content(space-between);
+    > article{
+      padding: $spacing;
+      border: solid 1px $border-color;
+      text-align: center;
+      flex: 0 1  unquote("calc(50% - #{$child_cols_gutter} )");
+      margin: $child_cols_gutter/2;
+      @include flexbox();
+      @include flex-direction(column);
+      figure{
+        img{
+         //width: 60px;
+          height: 60px;
+        }
+       
+      }
+      .body {
+        margin-top: auto;
+        font-size: 90%;
+      }
+      header{
+        line-height: 1.2;
+      }
+    }
+   
+  }
+
+}
+@include mqMin($break-m) {
+  .panel-card{
+    > article{
+      flex: 0 1  unquote("calc(33.3333% - #{$child_cols_gutter} )");
+    }
+   
+  }
+
+}
+@include mqMin($break-l) {
+  .panel-card{
+    > article{
+      flex: 0 1  unquote("calc(25% - #{$child_cols_gutter} )");
+    }
+   
+  }
+
+}
+

@@ -1,0 +1,28 @@
+@import "~sass/_shared";
+@import "~sass/components/_tooltip.1.0.0";
+
+/* Tooltip wrap
+-------------------------------------------------- */
+:host{
+
+  position: relative;
+  display: inline-block;
+  cursor: help;
+
+  &.on-hover {
+    &:hover {
+      .vds-tooltip {
+        display: block;
+      }
+    }
+  }
+  &.on-click {
+    .vds-tooltip {
+      &.is-expanded {
+        display: block;
+      }
+     
+    }
+  }
+  
+}

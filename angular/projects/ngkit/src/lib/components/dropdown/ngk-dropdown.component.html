@@ -1,0 +1,8 @@
+<div [ngClass]="'dropdown ' + classList" (ngkClickOut)="close($event)">
+    <header aria-haspopup="true" [attr.aria-expanded]="expanded" (click)="toggle()">
+    <ng-content select="[header]"></ng-content>
+    </header>
+    <div class="body" *ngIf="expanded" tabindex="-1" [ngClass]="classList" (click)="close($event)">
+    <ng-content select="[body]"></ng-content>
+    </div>
+    </div>

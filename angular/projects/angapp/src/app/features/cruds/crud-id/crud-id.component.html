@@ -1,0 +1,13 @@
+
+<div *ngIf="(data | async) as d; else loading">
+    <section class="page-header">
+        <h1>{{d.title}} {{d.id}} <small>{{d.name}}</small></h1>
+      </section>
+      <section>{{d.description}}</section>
+      <section class="align-center"><a class="button" [routerLink]="['/cruds']">Back</a></section>
+  </div>
+  <ng-template #loading>
+      Loading stuff...
+    </ng-template>
+
+<!-- <pre>{{ data | async |json}}</pre> -->
