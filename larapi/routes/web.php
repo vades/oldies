@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,12 +12,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//require 'snippmancom/web.php';
-//require 'vadesnet/web.php';
 
-//dd(Request::getHttpHost());
-Route::get('', function () {
-  return response()->json(['message' => 'This is api' ], 200);
+Route::fallback(function () {
+    return response()->json([
+        'name' => 'Abigail',
+        'state' => 'CA'
+    ]);
 });
 
-
+/* Route::get('/', function () {
+    return view('welcome');
+}); */

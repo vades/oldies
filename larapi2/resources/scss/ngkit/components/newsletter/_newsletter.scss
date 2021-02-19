@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// Newsletter - contains all styles related to the newsletter.
+// -----------------------------------------------------------------------------
+
+.newsletter {
+  section{
+    @include mqMax($break-s - 1) {
+      input,
+      button {
+        width: 100%;
+      }
+      input{
+          border-radius: $border-radius $border-radius 0 0;
+          border-width: 1px 1px 0 1px;
+      }
+      button{
+          border-radius: 0 0 $border-radius $border-radius;
+      }
+    }
+  
+    @include mqMin($break-s) {
+      @include displayFlex();
+      //@include flexDirection(column);
+      input,
+      button {
+        //width: 100%;
+        padding: $input-padding;
+        font: inherit;
+        font-weight: normal;
+        //border-radius: 0;
+        border: 1px solid $border-color;
+      }
+      input {
+        border-radius: $border-radius 0 0 $border-radius;
+        border-width: 1px 0 1px 1px;
+      }
+      button {
+        border-radius: 0 $border-radius $border-radius 0;
+      }
+    }
+  }
+
+}

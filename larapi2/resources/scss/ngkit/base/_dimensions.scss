@@ -1,0 +1,56 @@
+/* Element Width
+-------------------------------------------------- */
+
+// Set width on all devices
+@include generateWidthClasses('', 10);
+
+// Set width from the Extra Smal devices 480px
+@include mqMin($break-xs) {
+    @include generateWidthClasses('-xs', 10);
+}
+
+// Set width from the Smal devices 600px
+@include mqMin($break-s) {
+    @include generateWidthClasses('-s', 10);
+}
+
+// Set width from the Medium devices 960px
+@include mqMin($break-m) {
+    @include generateWidthClasses('-m', 10);
+}
+ 
+// Set width from the Large devices 1280px
+@include mqMin($break-l) {
+    @include generateWidthClasses('-l', 10);
+}
+
+// Set width from the Extra Large devices 1920px
+@include mqMin($break-xl) {
+    @include generateWidthClasses('-xl', 10);
+}
+
+// Set container max width to 480px
+.max-width-xs{
+    max-width: $break-xs;
+}
+
+// Set container max width to 600px
+.max-width-s{
+    max-width: $break-s;
+}
+
+// Set container max width to 960px
+.max-width-m{
+    max-width: $break-m;
+}
+
+// Set container max width to 1280px
+.max-width-l{
+    max-width: $break-l;
+}
+
+// Set container max width to 1920px
+.max-width-xl{
+    max-width: $break-xl;
+}
+

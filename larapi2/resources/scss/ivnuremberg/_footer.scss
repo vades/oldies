@@ -1,0 +1,16 @@
+/* Footer
+-------------------------------------------------- */
+#footer {
+  border-top: solid 1px $border-color;
+  .bar {
+    padding: $spacing;
+    font-size: 90%;
+    text-align: center;
+    a {
+      &::before {
+        content: "\2022";
+        padding: $spacing;
+      }
+    }
+  }
+}

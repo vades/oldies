@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// Header
+// -----------------------------------------------------------------------------
+#header {
+  z-index: $zindex-header;
+  height: $header-h;
+  padding: $spacing;
+  
+
+  @include mqMin($break-l) {
+
+    height: $header-h-l;
+    padding: $spacing $spacing-double;
+  }
+
+  >section {
+
+    @include displayFlex();
+    @include justifyContent(space-between);
+    @include alignItems(center);
+    height: 100%;
+    @include mqMin($break-l) {
+      margin: 0 auto;
+      //width: $container-max-w;
+    }
+
+  }
+
+}

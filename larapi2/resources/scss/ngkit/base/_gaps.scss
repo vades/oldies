@@ -1,0 +1,84 @@
+/* Paddings
+-------------------------------------------------- */
+.padding {
+  padding: $spacing;
+}
+
+.padding-double {
+  padding: $spacing-double;
+}
+
+.padding-triple {
+  padding: $spacing-triple;
+}
+
+.padding-quad {
+  padding: $spacing-quad;
+}
+
+.padding-half {
+  padding: $spacing-half;
+}
+
+/* Margins
+-------------------------------------------------- */
+/* all */
+.margin {
+  margin: $spacing;
+}
+
+.margin-double {
+  margin: $spacing-double;
+}
+
+.margin-triple {
+  margin: $spacing-triple;
+}
+
+.margin-quad {
+  margin: $spacing-quad;
+}
+
+.margin-half {
+  margin: $spacing-half;
+}
+
+/* top */
+.margin-top {
+  margin-top: $spacing;
+}
+
+.margin-top-double { 
+  margin-top: $spacing-double;
+}
+
+.margin-top-triple {
+  margin-top: $spacing-triple;
+}
+
+.margin-top-quad {
+  margin-top: $spacing-quad;
+}
+
+.margin-top-half {
+  margin-top: $spacing-half;
+}
+
+/* right */
+.margin-right {
+  margin-right: $spacing;
+}
+
+/* bottom */
+.margin-bottom {
+  margin-bottom: $spacing;
+}
+
+/* left */
+.margin-left {
+  margin-left: $spacing;
+}
+
+.margin-lr-auto {
+  margin: auto;
+}

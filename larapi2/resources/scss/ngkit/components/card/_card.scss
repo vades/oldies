@@ -1,0 +1,45 @@
+/* Card
+-------------------------------------------------- */
+.cards {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.card{
+  @include flexbox();
+  //@include justify-content(space-between);
+  @include flex-direction(column);
+  list-style: none;
+  text-align: center;
+  margin-bottom: $spacing;
+
+  header {
+    padding: $spacing $spacing $spacing-half $spacing;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  article {
+    @include flex(1 0 auto);
+    @include flexbox();
+    @include flex-direction(column);
+    padding: $spacing-half $spacing $spacing $spacing;
+
+    footer {
+      margin-top: auto;
+      font-size: 90%;
+    }
+  }
+
+  @include mqMin($break-xs) {
+    margin-bottom: 0;
+
+    @if $child_cols_gutter !='0' {
+      margin: $child_cols_gutter/2;
+    }
+  }
+}

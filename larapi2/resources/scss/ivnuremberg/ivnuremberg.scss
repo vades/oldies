@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+/* Shared
+-------------------------------------------------- */
+@import "../ngkit/_shared";
+
+/* Vendors
+-------------------------------------------------- */
+@import "../ngkit/vendor/normalize/normalize";
+@import "../ngkit/vendor/minireset/minireset";
+
+/* Base
+-------------------------------------------------- */
+@import "../ngkit/base/body";
+@import "../ngkit/base/typo";
+@import "../ngkit/base/dimensions";
+@import "../ngkit/base/display";
+
+/* Elements
+-------------------------------------------------- */
+@import "../ngkit/elements/list/list";
+@import "../ngkit/elements/nav/nav";
+@import "../ngkit/elements/code/code";
+@import "../ngkit/elements/form/form";
+@import "../ngkit/elements/input/texty-input";
+@import "../ngkit/elements/input/select";
+@import "../ngkit/elements/button/button";
+@import "../ngkit/elements/input/range";
+@import "../ngkit/elements/table/table";
+@import "../ngkit/elements/iframe/iframe";
+@import "../ngkit/elements/section/section";
+@import "../ngkit/elements/badge/badge";
+@import "../ngkit/elements/grid/grid";
+@import "../ngkit/elements/flexbox/flexbox";
+@import "../ngkit/elements/icons/maticons";
+
+/* Helpers
+-------------------------------------------------- */
+@import "../ngkit/base/helpers";
+@import "../ngkit/base/gaps";
+@import "../ngkit/base/colors"; 
+
+/* Custom layouts
+-------------------------------------------------- */
+//@import "scss/layout/layout-c";
+@import "layout";
+
+/* Styles
+-------------------------------------------------- */
+@import "header";
+@import "aside-left";
+@import "footer";
+@import "common";
+@import "places";
+
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */

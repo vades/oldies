@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// Places
+// -----------------------------------------------------------------------------
+
+/* Place read */
+#place_read{
+   
+    
+}
+
+
+
+.place-description-show{
+
+    @include mqMin($break-m) {
+    @include flexbox();
+    @include justify-content(space-between);
+    //flex: 1;
+
+    app-places-read-description{
+        @include order(2);
+    }
+    
+    ngk-lightbox{
+        @include order(1);
+    }
+      }
+}
+
+.place-description-hide{
+
+    app-places-read-description{
+       display: none !important;
+    }
+}

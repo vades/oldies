@@ -1,8 +1,0 @@
-Search
-==========
-Description
-
-## Usage
-````
-
-```

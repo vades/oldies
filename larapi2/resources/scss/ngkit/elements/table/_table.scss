@@ -1,0 +1,31 @@
+/* Table
+-------------------------------------------------- */
+table {
+  
+
+  @include table();
+
+  /* Condensed */
+  &.is-condensed {
+    @include tableIsCondensed();
+  }
+  /* Bordered table */
+  &.is-bordered {
+    @include tableIsBordered();
+  }
+
+  /* Striped table */
+  &.is-striped {
+    @include tableIsStriped();
+  }
+
+  /* Hover */
+  &.has-hover {
+    @include tableHasHover();
+  }
+
+  /* Disabled, grayed out etc. */
+  .is-disabled {
+    @include tableGrayedOut();
+  }
+}

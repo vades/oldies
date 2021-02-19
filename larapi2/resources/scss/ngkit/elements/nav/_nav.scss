@@ -1,0 +1,107 @@
+/* Navigation
+-------------------------------------------------- */
+nav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .inline {
+    >* {
+      padding: 0 $spacing;
+      display: inline-block;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+/* Navbar
+-------------------------------------------------- */
+.navbar {
+  li {
+
+    //margin-bottom: $spacing;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .delim {
+    border-top: solid 1px $border-color;
+  }
+
+  a {
+    white-space: nowrap;
+    text-align: left;
+    display: block;
+    min-width: 100%;
+    margin-bottom: $spacing;
+
+    &:hover {
+      text-decoration: none;
+
+      &::after {
+        margin-left: $spacing-half;
+        content: '\00BB';
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  [role=heading] {}
+
+  [aria-level="1"] {
+    margin-bottom: $spacing;
+
+  }
+
+  [role=separator] {
+    border-top: solid 1px $border-color;
+    margin: $spacing 0;
+  }
+}
+
+/*
+* Vertical on small devices 
+* Horizontal on large devices
+-------------------------------------------------- */
+.hor-ver {
+  @include mqMax($break-l - 1) {
+    li{
+      margin-bottom: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        white-space: nowrap;
+        text-align: left;
+        display: block;
+        min-width: 100%;
+        margin-bottom: $spacing;
+    
+        &:hover {
+          text-decoration: none;
+    
+          &::after {
+            margin-left: $spacing-half;
+            content: '\00BB';
+          }
+        }
+      }
+    }
+   
+  }
+  @include mqMin($break-l) {
+    li {
+      margin-right: $spacing-double;
+      display: inline-block;
+    }
+  }
+}

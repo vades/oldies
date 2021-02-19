@@ -1,0 +1,148 @@
+/* Button
+-------------------------------------------------- */
+
+.button {
+  @include button();
+
+  &:hover {
+    //animation: pulse 1s ease-in-out infinite alternate;
+    animation: pulse 1s infinite;
+  }
+
+  @include pulse();
+
+  &.is-text {
+    padding: $spacing-half 0;
+    border: 0;
+    @include buttonTransparent();
+  }
+
+  &.is-outlined {
+    @include buttonTransparent();
+  }
+
+
+  &.is-disabled {
+    @include buttonDisabled();
+  }
+
+  &.is-default {
+    @include buttonColored($border-color, $button-color);
+  }
+
+  &.is-info {
+    @include buttonColored($info-color);
+  }
+
+  &.is-success {
+    @include buttonColored($success-color);
+
+  }
+
+  &.is-warning {
+    @include buttonColored($warning-color);
+
+  }
+
+  &.is-danger {
+    @include buttonColored($danger-color);
+  }
+
+  &.size-xs {
+    font-size: 80%;
+    padding: $spacing-half $spacing;
+  }
+
+  &.size-s {
+    font-size: 90%;
+    padding: $spacing-half $spacing;
+  }
+
+  &.size-m {
+    font-size: 140%;
+    padding: $spacing $spacing-and-half;
+  }
+
+  &.size-l {
+    font-size: 160%;
+    padding: $spacing-and-half $spacing-double;
+  }
+
+  &.size-xl {
+    font-size: 200%;
+    padding: $spacing-double $spacing-triple;
+  }
+
+
+  &.is-circle {
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0;
+    border: 0;
+
+    &:focus {
+      outline: 0;
+    }
+
+    @include buttonCircle();
+
+    &.cw-16 {
+      @include buttonCircle(16px);
+    }
+
+    &.cw-24 {
+      @include buttonCircle(24px);
+    }
+
+    &.cw-40 {
+      @include buttonCircle(40px);
+    }
+
+    &.cw-48 {
+      @include buttonCircle(48px);
+    }
+
+    &.cw-56 {
+      @include buttonCircle(56px);
+    }
+
+    &.cw-64 {
+      @include buttonCircle(64px);
+    }
+
+    &.cw-72 {
+      @include buttonCircle(72px);
+    }
+
+    &.cw-80 {
+      @include buttonCircle(80px);
+    }
+
+    &.cw-88 {
+      @include buttonCircle(88px);
+    }
+
+    &.cw-96 {
+      @include buttonCircle(96px);
+    }
+
+    &.cw-104 {
+      @include buttonCircle(104px);
+    }
+
+    &.cw-112 {
+      @include buttonCircle(112px);
+    }
+
+    &.cw-120 {
+      @include buttonCircle(120px);
+    }
+
+    &.cw-128 {
+      @include buttonCircle(128px);
+    }
+
+  }
+
+}

@@ -1,0 +1,45 @@
+/* Display
+-------------------------------------------------- */
+.flexbox {
+  @include flexbox();
+}
+
+/* Justify content
+-------------------------------------------------- */
+.justify-content-fs {
+  @include justify-content(flex-start);
+}
+
+.justify-content-fe {
+  @include justify-content(flex-end);
+}
+
+.justify-content-c {
+  @include justify-content(center);
+}
+
+.justify-content-sb {
+  @include justify-content(space-between);
+}
+
+.justify-content-sa {
+  @include justify-content(space-around);
+}
+
+.justify-content-se {
+  @include justify-content(space-evenly);
+}
+
+
+
+/* Align items
+-------------------------------------------------- */
+.align-items-c {
+  @include align-items(center);
+}
+
+/* Wrao
+-------------------------------------------------- */
+.flex-wrap {
+  @include flex-wrap(wrap);
+}

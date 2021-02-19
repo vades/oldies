@@ -1,0 +1,91 @@
+/* snackbar
+-------------------------------------------------- */
+$snackbar-color: $gray-90;
+$snackbar-bcg-color: $gray-10;
+$snackbar-color-inverse: $gray-10;
+$snackbar-bcg-color-inverse: $gray-90;
+
+/* Wrapper
+-------------------------------------------------- */
+:host {
+  position: relative;
+  z-index: 10000;
+  margin: 0 auto;
+  > * {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+
+    @include mqMin($break-m) {
+      max-width: 60%;
+      left: 25%;
+      bottom: 2%;
+    }
+  }
+}
+/* snackbar style
+-------------------------------------------------- */
+.snackbar {
+  @include flexbox();
+  @include justify-content(space-between);
+  @include align-items(center);
+  color: $snackbar-color;
+  padding: $spacing $spacing-double;
+  background-color: $snackbar-bcg-color;
+  border: solid $gray-20 1px;
+  font-weight: bold;
+
+  .close {
+    font-size: 120%;
+    cursor: pointer;
+    color: $gray-60;
+  }
+
+  &.is-info {
+    border-color: $info-color;
+  }
+
+  &.is-success {
+    border-color: $success-color;
+  }
+
+  &.is-warning {
+    border-color: $warning-color;
+  }
+
+  &.is-danger {
+    border-color: $danger-color;
+  }
+
+  /* Inverse
+  -------------------------------------------------- */
+  &.inverse {
+    color: $snackbar-color-inverse;
+    background-color: $snackbar-bcg-color-inverse;
+    border: 0;
+    .close {
+      color: $snackbar-color-inverse;
+    }
+
+    &.is-info {
+      border-color: $info-color;
+      color: $info-color;
+    }
+
+    &.is-success {
+      border-color: $success-color;
+      color: $success-color;
+    }
+
+    &.is-warning {
+      border-color: $warning-color;
+      color: $warning-color;
+    }
+
+    &.is-danger {
+      border-color: $danger-color;
+      color: $danger-color;
+    }
+  }
+}

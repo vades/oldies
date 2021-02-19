@@ -1,0 +1,48 @@
+/* Navi
+-------------------------------------------------- */
+:host {
+  display: inline-block;
+  width: auto;
+}
+
+.navi {
+  @include mqMax($break-l - 1) {
+    position: relative;
+   .body{
+    background-color: $bcg-color;
+    position: fixed;
+    width: 75%;
+    top: 0;
+    bottom: 0;
+
+    &:not(.right) {
+      left: 0;
+    }
+
+    &.right {
+      right: 0;
+    }
+    width: 75%;
+    z-index: $zindex-canvas;
+    padding: $spacing-triple $spacing $spacing;
+    @include boxShadow($box-shadow);
+   }
+    .overlay{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: $zindex-canvas - 1;
+      background-color: $overlay-bcg-color;
+    }
+  }
+ 
+  @include mqMin($break-l) {
+   .overlay{
+     display: none;
+   }
+  }
+}
+

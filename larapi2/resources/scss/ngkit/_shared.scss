@@ -1,0 +1,30 @@
+
+// -----------------------------------------------------------------------------
+// Contains shared files (variables, colors, mixins..) used by csskit.scss and custom.scss.
+// -----------------------------------------------------------------------------
+
+/* Settings
+-------------------------------------------------- */
+@import "core/variables/_variables";
+@import "core/variables/_device-breakpoints";
+@import "core/variables/_fonts";  
+@import "core/variables/_colors";
+@import "core/variables/_gaps";
+@import "core/variables/_dimensions";
+@import "core/variables/_z-index";
+
+/* Custom variables
+-------------------------------------------------- */
+/* @import "custom/_variables";
+@import "custom/_colors"; */
+
+/* Mixins
+-------------------------------------------------- */
+@import "core/mixins/_pulse"; 
+@import "core/mixins/_mixins"; 
+@import "core/mixins/_flex-box"; 
+@import "core/mixins/_button"; 
+@import "core/mixins/_texty-input"; 
+@import "core/mixins/_placeholder"; 
+@import "core/mixins/_offcanvas"; 
+@import "core/mixins/_table"; 

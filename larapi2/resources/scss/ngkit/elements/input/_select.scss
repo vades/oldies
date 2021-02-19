@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// Select - contains all styles related to the select
+// -----------------------------------------------------------------------------
+
+select {
+  padding: $input-padding;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  background-color: $input-bcg-color;
+  width: 100%;
+  cursor: pointer;
+}
